@@ -1,0 +1,104 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
+
+<dom-module id="bing-static-map">
+
+	<template>
+		<iron-image style$=[[_style]] src=[[_url]] fade preload sizing='cover'></iron-image>
+	</template>
+
+</dom-module>
+
+<script>
+
+(function() {
+
+	Polymer({
+		is: 'bing-static-map',
+		properties: {
+			width: {
+				type: Number,
+				/* Maximal width supported by Bing Maps */
+				value: 900
+			},
+			height: {
+				type: Number,
+				/* Maximal height supported by Bing Maps */
+				value: 834
+			},
+			
+			pushpinLatitude: {
+				type: Number,
+				value: 'na'
+			},
+			pushpinLongitude: {
+				type: Number,
+				value: 'na'
+			},
+
+			mapAreaNorthEastLatitude: {
+				type: Number,
+				value: 'na'
+			},
+			mapAreaNorthEastLongitude: {
+				type: Number,
+				value: 'na'
+			},
+			mapAreaSouthWestLatitude: {
+				type: Number,
+				value: 'na'
+			},
+			mapAreaSouthWestLongitude: {
+				type: Number,
+				value: 'na'
+			},
+			
+			key: String,
+			
+			_url: {
+				type: String,
+				computed: '_computeUrl(width,height,pushpinLatitude,pushpinLongitude,mapAreaNorthEastLatitude,mapAreaNorthEastLongitude,mapAreaSouthWestLatitude,mapAreaSouthWestLongitude,key)'
+			},
+			_style: {
+				type: String,
+				computed: '_computeStyle(width,height)'
+			}
+		},
+		
+		// Private methods
+		_computeUrl: function(width,height,pushpinLatitude,pushpinLongitude,mapAreaNorthEastLatitude,mapAreaNorthEastLongitude,mapAreaSouthWestLatitude,mapAreaSouthWestLongitude,key) {
+			var url = 'https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/?';
+			
+			if (this._has(pushpinLatitude) && this._has(pushpinLongitude != 'na')) {
+				url += 'pp=' + pushpinLatitude + ',' + pushpinLongitude + ';';
+				// Icon type @see http://msdn.microsoft.com/en-us/library/ff701719.aspx
+				url += '37;';
+			}
+			
+			if (this._has(mapAreaNorthEastLatitude) && this._has(mapAreaNorthEastLongitude) && this._has(mapAreaSouthWestLatitude) && this._has(mapAreaSouthWestLongitude)) {
+				url += '&mapArea=';
+				url += mapAreaSouthWestLatitude + ',' + mapAreaSouthWestLongitude + ',';
+				url += mapAreaNorthEastLatitude + ',' +  mapAreaNorthEastLongitude;
+			}
+			
+			// Enforce view size to be within Bing's valid sizes: min = 80x80, max = 900x834
+			var viewWidth = width > 900 ? 900 : width < 80 ? 80 : width;
+			var viewHeight = height > 834 ? 834 : height < 80 ? 80 : height;
+			url += '&mapSize=' + viewWidth + ',' + viewHeight;
+			
+			url += '&key=' + key;
+			
+			return url;
+		},
+		_computeStyle: function(width,height) {
+			return 'width:' + width + 'px;height:'+ height + 'px;';
+		},
+		_has: function(value) {
+			return typeof value !== 'undefined' && value !== null && value !== 'na';
+		}
+	});
+
+})();
+
+</script>
+
