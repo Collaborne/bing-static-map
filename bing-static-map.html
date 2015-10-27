@@ -69,7 +69,7 @@
 		_computeUrl: function(width,height,pushpinLatitude,pushpinLongitude,mapAreaNorthEastLatitude,mapAreaNorthEastLongitude,mapAreaSouthWestLatitude,mapAreaSouthWestLongitude,key) {
 			var url = 'https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/?';
 			
-			if (this._has(pushpinLatitude) && this._has(pushpinLongitude != 'na')) {
+			if (this._has(pushpinLatitude) && this._has(pushpinLongitude)) {
 				url += 'pp=' + pushpinLatitude + ',' + pushpinLongitude + ';';
 				// Icon type @see http://msdn.microsoft.com/en-us/library/ff701719.aspx
 				url += '37;';
