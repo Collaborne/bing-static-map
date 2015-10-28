@@ -3,8 +3,16 @@
 
 <dom-module id="bing-static-map">
 
+	<style>
+		:host {
+			display: block;
+		}
+	</style>
+
 	<template>
-		<iron-image style$=[[_style]] src=[[_url]] fade preload sizing='cover'></iron-image>
+		<iron-image src=[[_url]] style$=[[_style]] fade sizing='cover'>
+			<content></content>
+		</iron-image>
 	</template>
 
 </dom-module>
