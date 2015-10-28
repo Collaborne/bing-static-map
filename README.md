@@ -39,6 +39,7 @@ Property                          | Type    | Description
 **map-area-north-east-longitude** | Number  | Longitude of the North East point of the map area
 **map-area-south-west-latitude**  | Number  | Latitude of the South West point of the map area
 **map-area-south-west-longitude** | Number  | Longitude of the South West point of the map area
+**key**                           | String  | API key to use the Bing Maps API. You can request a key [here](https://msdn.microsoft.com/en-us/library/ff428642.aspx).
 
 
 ## Continuous integration
