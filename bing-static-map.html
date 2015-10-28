@@ -7,10 +7,14 @@
 		:host {
 			display: block;
 		}
+		
+		.image {
+			width: 100%;
+		}
 	</style>
 
 	<template>
-		<iron-image src=[[_url]] style$=[[_style]] fade sizing='cover'>
+		<iron-image class='image' src$=[[_url]] height=[[_height]] fade sizing='cover'>
 			<content></content>
 		</iron-image>
 	</template>
@@ -67,9 +71,9 @@
 				type: String,
 				computed: '_computeUrl(width,height,pushpinLatitude,pushpinLongitude,mapAreaNorthEastLatitude,mapAreaNorthEastLongitude,mapAreaSouthWestLatitude,mapAreaSouthWestLongitude,key)'
 			},
-			_style: {
-				type: String,
-				computed: '_computeStyle(width,height)'
+			_height: {
+				type: Number,
+				computed: '_computeHeight(height)'
 			}
 		},
 		
@@ -98,8 +102,9 @@
 			
 			return url;
 		},
-		_computeStyle: function(width,height) {
-			return 'width:' + width + 'px;height:'+ height + 'px;';
+		_computeHeight: function(height) {
+			// Density of retina display
+			return height / 2;
 		},
 		_has: function(value) {
 			return typeof value !== 'undefined' && value !== null && value !== 'na';

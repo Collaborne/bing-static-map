@@ -107,6 +107,11 @@
 						element.height = 100000;
 						expect(element._url).contains('mapSize=900,834&');
 					});
+					
+					test('view height is half of image height (for retina displays)', function() {
+						element.height = 442;
+						expect(element._height).to.be.eql(221);
+					});
 				});
 			});
 		</script>
