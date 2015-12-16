@@ -1,4 +1,4 @@
-bing-static-map [![Bower version](https://badge.fury.io/bo/bing-static-map.svg)](http://badge.fury.io/bo/bing-static-map)
+bing-static-map [![Bower version](https://badge.fury.io/bo/bing-static-map.svg)](http://badge.fury.io/bo/bing-static-map) [![Travis state](https://travis-ci.org/Collaborne/bing-static-map.svg?branch=master)](https://travis-ci.org/Collaborne/bing-static-map)
 =========
 
 `bing-static-map` is a web component to render a [static Bing Map](http://msdn.microsoft.com/en-us/library/ff701724.aspx). The web component is built with [Polymer 1.x](https://www.polymer-project.org).
@@ -40,11 +40,6 @@ Property                          | Type    | Description
 **map-area-south-west-latitude**  | Number  | Latitude of the South West point of the map area
 **map-area-south-west-longitude** | Number  | Longitude of the South West point of the map area
 **key**                           | String  | API key to use the Bing Maps API. You can request a key [here](https://msdn.microsoft.com/en-us/library/ff428642.aspx).
-
-
-## Continuous integration
-
-[Travis-CI](https://travis-ci.org/Collaborne/bing-static-map) [![Travis state](https://travis-ci.org/Collaborne/bing-static-map.svg?branch=master)](https://travis-ci.org/Collaborne/bing-static-map)
 
 
 ## License
