@@ -1,3 +1,6 @@
+_[Demo and API Docs](http://collaborne.github.io/bing-static-map)_
+
+
 bing-static-map [![Bower version](https://badge.fury.io/bo/bing-static-map.svg)](http://badge.fury.io/bo/bing-static-map) [![Travis state](https://travis-ci.org/Collaborne/bing-static-map.svg?branch=master)](https://travis-ci.org/Collaborne/bing-static-map)
 =========
 
@@ -5,41 +8,9 @@ bing-static-map [![Bower version](https://badge.fury.io/bo/bing-static-map.svg)]
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
-
-## Usage
+To use this element:
 
 `bower install bing-static-map`
-
-```html
-<bing-static-map
-  width="500"
-  height="300"
-  pushpin-latitude="52.35952"
-  pushpin-longitude="4.90348"
-  map-area-north-east-latitude="52.3606441"
-  map-area-north-east-longitude="4.9053208"
-  map-area-south-west-latitude="52.3583958"
-  map-area-south-west-longitude="4.9016393"
-  key="YOUR-BING-KEY"
-></bing-static-map>
-```
-
-
-## Properties & styles
-
-These properties are available:
-
-Property                          | Type    | Description
---------------------------------- | ------- | ----------------------------
-**width**                         | Number  | Width of the image
-**height**                        | Number  | Height of the image
-**pushpin-latitude**              | Number  | Latitude of the pushpin
-**pushpin-longitude**             | Number  | Longitude of the pushpin
-**map-area-north-east-latitude**  | Number  | Latitude of the North East point of the map area
-**map-area-north-east-longitude** | Number  | Longitude of the North East point of the map area
-**map-area-south-west-latitude**  | Number  | Latitude of the South West point of the map area
-**map-area-south-west-longitude** | Number  | Longitude of the South West point of the map area
-**key**                           | String  | API key to use the Bing Maps API. You can request a key [here](https://msdn.microsoft.com/en-us/library/ff428642.aspx).
 
 
 ## License

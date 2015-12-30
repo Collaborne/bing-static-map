@@ -1,6 +1,28 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-image/iron-image.html">
 
+<!--
+A web component to render a [static Bing Map](http://msdn.microsoft.com/en-us/library/ff701724.aspx)
+
+### Example
+
+```html
+<bing-static-map
+  width="500"
+  height="300"
+  pushpin-latitude="52.35952"
+  pushpin-longitude="4.90348"
+  map-area-north-east-latitude="52.3606441"
+  map-area-north-east-longitude="4.9053208"
+  map-area-south-west-latitude="52.3583958"
+  map-area-south-west-longitude="4.9016393"
+  key="YOUR-BING-KEY"
+></bing-static-map>
+```
+
+
+@demo demo/index.html
+-->
 <dom-module id="bing-static-map">
 
 	<style>
@@ -28,43 +50,75 @@
 	Polymer({
 		is: 'bing-static-map',
 		properties: {
+			/**
+			 * Width of the image
+			 */
 			width: {
 				type: Number,
 				/* Maximal width supported by Bing Maps */
 				value: 900
 			},
+			
+			/**
+			 * Height of the image
+			 */
 			height: {
 				type: Number,
 				/* Maximal height supported by Bing Maps */
 				value: 834
 			},
 			
+			/**
+			 * Latitude of the pushpin
+			 */
 			pushpinLatitude: {
 				type: Number,
 				value: 'na'
 			},
+			
+			/**
+			 * Longitude of the pushpin
+			 */
 			pushpinLongitude: {
 				type: Number,
 				value: 'na'
 			},
 
+			/**
+			 * Latitude of the North East point of the map area
+			 */
 			mapAreaNorthEastLatitude: {
 				type: Number,
 				value: 'na'
 			},
+			
+			/**
+			 * Longitude of the North East point of the map area
+			 */
 			mapAreaNorthEastLongitude: {
 				type: Number,
 				value: 'na'
 			},
+			
+			/**
+			 * Latitude of the South West point of the map area
+			 */
 			mapAreaSouthWestLatitude: {
 				type: Number,
 				value: 'na'
 			},
+			
+			/**
+			 * Longitude of the South West point of the map area
+			 */
 			mapAreaSouthWestLongitude: {
 				type: Number,
 				value: 'na'
 			},
 			
+			/**
+			 * API key to use the Bing Maps API. You can request a key [here](https://msdn.microsoft.com/en-us/library/ff428642.aspx).
+			 */
 			key: String,
 			
 			_url: {
