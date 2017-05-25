@@ -37,7 +37,7 @@ A web component to render a [static Bing Map](http://msdn.microsoft.com/en-us/li
 
 	<template>
 		<iron-image class='image' src$=[[_url]] height=[[_height]] fade sizing='cover'>
-			<content></content>
+			<slot></slot>
 		</iron-image>
 	</template>
 
