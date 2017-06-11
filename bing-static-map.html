@@ -25,17 +25,17 @@ A web component to render a [static Bing Map](http://msdn.microsoft.com/en-us/li
 -->
 <dom-module id="bing-static-map">
 
-	<style>
-		:host {
-			display: block;
-		}
-		
-		.image {
-			width: 100%;
-		}
-	</style>
-
 	<template>
+		<style>
+			:host {
+				display: block;
+			}
+			
+			.image {
+				width: 100%;
+			}
+		</style>
+
 		<iron-image class='image' src$=[[_url]] height=[[_height]] fade sizing='cover'>
 			<slot></slot>
 		</iron-image>

@@ -3,7 +3,7 @@
   "authors": [
     "collaborne"
   ],
-  "description": "Web component that renders a static Bing map (Polymer 1.x)",
+  "description": "Web component that renders a static Bing map (Polymer)",
   "main": "bing-static-map.html",
   "keywords": [
     "web-components",
@@ -17,12 +17,12 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
-    "iron-image": "PolymerElements/iron-image#^1.0.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-image": "PolymerElements/iron-image#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "paper-input": "PolymerElements/paper-input#^2.0.0",
+    "web-component-tester": "*"
   }
 }
