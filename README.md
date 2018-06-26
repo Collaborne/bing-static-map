@@ -1,4 +1,7 @@
 bing-static-map [![Bower version](https://badge.fury.io/bo/bing-static-map.svg)](http://badge.fury.io/bo/bing-static-map) [![Travis state](https://travis-ci.org/Collaborne/bing-static-map.svg?branch=master)](https://travis-ci.org/Collaborne/bing-static-map) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/Collaborne/bing-static-map)
+
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/Collabornebing-static-map)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/Collabornebing-static-map.svg)](https://vaadin.com/directory/component/Collabornebing-static-map)
 =========
 
 `bing-static-map` is a web component to render a [static Bing Map](http://msdn.microsoft.com/en-us/library/ff701724.aspx). The web component is built with [Polymer](https://www.polymer-project.org).
